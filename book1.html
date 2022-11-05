@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+        }
+        .main{
+            background: url(28892.jpg)no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .table{
+            background-color: rgba(rgb(248, 209, 209),0.5);
+            backdrop-filter: blur(10px);
+            height: 80vh;
+            width: 80vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+          </nav>
+          <div class="table">
+            <table class="tab1">
+                <tr>
+                    <td class="tab2">
+                        <label for="firstname">First Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="firstname" name="firstname" placeholder=" Your First Name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tab2"><label for="lastname">Last Name:</label></td>
+                    <td>
+                        <input type="text" id="lastname" name="lastname" placeholder="Your Last Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tab2"><label for="address">Address</label></td>
+                    <td><textarea placeholder="Type your address" id="address" name="address" rows="6" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="tab2"><label for="gender">Gender:</label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="1"/>Male
+                        <input type="radio" id="female" name="gender" value="2"/>Female
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tab2"><label for="mobile">Mobile:</label></td>
+                    <td><input type="number" id="mobile" placeholder="Mobile number"></td>
+                </tr>
+                <tr>
+                    <td class="tab2"><label for="email">Email:</label></td>
+                    <td><input type="text" id="email" placeholder="Enter your email id"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" onclick="javascript:saveData();"id=submit></td>
+                    <td><input type="reset" id="reset" name="reset" value="Reset"/></td>
+                </tr>
+            </table>
+            </form>
+            <script>
+                function saveData(){
+                    var firstname=document.getElementById('firstname').value;
+                    var lastname=document.getElementById('lastname').value;
+                    var address=document.getElementById('address').value;
+                    
+                    localStorage.setItem('firstname',firstname);
+                    localStorage.setItem('lastname',lastname);
+                    localStorage.setItem('address',address);
+                }
+            </script>
+          </div>
+    </div>
+</body>
+</html>

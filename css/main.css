@@ -1,0 +1,26 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+label{
+    color:blue;
+     font-weight:bold;
+}
+.tab1{
+    border:1px solid #cc0000;
+}
+.tab2{
+    border:1px solid#3407d9;
+}
+#lastname{
+    color:brown;
+}
+ body > p{
+    font-style:italic;
+    font-size:medium;
+}
+.parent{
+    border: 2px dashed #cc0000;
+    padding: 10px;
+    margin: 15px 5px;
+}
