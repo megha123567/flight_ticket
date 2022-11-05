@@ -1,0 +1,51 @@
+create database flight_management_sysytem;
+use flight_management_sysytem;
+create table flight(
+flight_number int primary key auto_increment,
+flight_name varchar(50) not null,
+flight_description varchar(200) not null,
+flight_total_capacity int not null
+);
+
+
+ create table flight_schedule(
+ id int primary key auto_increment,
+ flight_from varchar(50) not null,
+ flight_to varchar(50) not null,
+ flight_date date,
+ flight_time time,
+ cost int not null,
+ flight_number int ,
+ constraint FK_schedule_flight_number foreign key(flight_number)
+ references flight(flight_number)
+ );
+
+
+create table passenger(
+passenger_id int primary key auto_increment,
+name varchar(50) not null,
+user_name varchar(50) not null,
+email varchar(50) not null,
+password varchar(50),
+mobile int not null,
+address varchar(50) not null,
+dob date
+);
+
+
+create table booked_ticket(
+ticket_number int primary key ,
+date_of_booking date,
+date_of_travel date,
+flight_number int,
+flight_from varchar(50) not null,
+flight_to varchar(50) not null,
+flight_time time,
+boarding_time time,
+flight_seat varchar(20),
+passenger_id int,
+constraint FK_Booked_passenger_id foreign key(passenger_id)
+references passenger(passenger_id),
+constraint FK_Booked_flight_number foreign key(flight_number)
+references flight(flight_number)
+);
