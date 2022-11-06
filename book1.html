@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking page</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<style>
+    .main{
+       
+
+        /* display: flex; */
+          /* background-color: aquamarine;*/
+      
+        width: 60vw;
+        
+    }
+    .main1{
+        background: url(1973320.jpg)no-repeat;
+        background-size: cover;
+        height: 100vh;
+
+    }
+</style>
+<body>
+   <div class="main1">
+    <div class="main">
+        <form action="print.html" method="get">
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" >
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" >
+              </div>
+              <div class="mb-3">
+                <label for="mobile_number" class="form-label">Mobile</label>
+                <input type="number" class="form-control" id="mobile_number" >
+              </div>
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="Address" >
+              </div>
+              <div class="mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="dob" class="form-control" id="dob" >
+              </div>
+              <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <input type="radio" id="male" name="gender" value="1"/>Male
+                <input type="radio" id="female" name="gender" value="2"/>Female
+                <!-- <input type="name" class="form-control" id="firstName" > -->
+              </div>
+              <div class="mb-3">
+                <label for="traveling_date" class="form-label">Date of Travel</label>
+                <input type="dob" class="form-control" id="traveling_date" >
+              </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <!-- <div class="mb-3"> -->
+                <!-- <button type="submit" class="form-control" onclick="javascript:saveData();"id=submit> Submit</button>
+                <button type="reset" class="form-control" id="reset" name="reset" value="Reset">Reset</button> -->
+              <!-- </div> -->
+            <button type="submit" class="btn btn-outline-primary"  id="submit"><a href="index1.html">Submit</a>
+            </button>
+          </form>
+    </div>
+   </div>
+</body>
+</html>
