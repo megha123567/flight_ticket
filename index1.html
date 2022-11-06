@@ -15,12 +15,44 @@
             background: url(selective-focus-miniature-tourist-compass-map-with-plastic-toy-airplane-abstract-background-travel-concept.jpg)no-repeat;
             background-size: cover;
             height: 100vh;
-        }   
+
+        }  
+        .main2{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+         
+        /* .flight{ 
+        background-color: aqua;
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        } */
+        .alert-danger{
+        color: red;
+        }
+       .tab2{
+        list-style-type: none;
+        }
+        .tab2 a{
+        color: rgb(16, 10, 10);
+        text-decoration: none;
+        }
+        .btn a{
+          text-decoration: none;
+
+        }
+
+
     </style>
 </head>
 <body>  
     <div class="main">
-        <nav class="navbar navbar-expand-lg " style="background-color:rgb(243, 245, 255)">
+        <div class="main1">
+          <nav class="navbar navbar-expand-lg " style="background-color:rgb(243, 245, 255)">
             <div class="container-fluid">
               <a class="navbar-brand" href="index1.html"><b>FBM✈</b></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,10 +64,7 @@
                     <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="login1.html">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="registration.htm">Registration</a>
+                    <a class="nav-link" href="registration.html">Registration</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="registration.htm">Contact Us</a>
@@ -44,6 +73,50 @@
               </div>
             </div>
           </nav>
+
+        </div>
+        <pre>
+
+
+
+
+        </pre>
+
+         <div class="main2">
+          <div class="flight">
+        
+          
+                <!-- <h1 class="tab2"><a href="index1.html">Login</a></h1> -->
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <p class="alert-danger" id="error-messages"></p>
+                  <button type="submit" class="btn btn-outline-secondary" onclick="return validate();"><a href="home.html">Login</a></button>
+                </form>           
+        </div>
+         </div>
     </div>
 </body>
+<script>
+  function validate(e){
+        var email = document.forms[0]['inputEmail3'];
+        var password = document.forms[0]['inputPassword3'];
+        var error = document.getElementById('error-messages');
+        if(!email.validity.valid){
+            error.innerHTML = 'Please enter a valid email';
+            return false;
+        }
+        if(!password.validity.valid){
+            error.innerHTML = 'Please enter a valid password';
+            return false;
+        }
+        e.preventDefault();
+    }
+</script>
 </html>

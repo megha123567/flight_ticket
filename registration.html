@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+        }
+        .main{
+            background: url(top-view-white-plane-green-background.jpg)no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .main1{
+            background-color: rgba(rgb(248, 209, 209),0.5);
+            /* backdrop-filter: blur(10px); */
+            height: 80vh;
+            width: 80vh;
+        }
+        .alert-danger{
+        color: red;
+        }
+        #errorpass{
+            color: red;
+        }
+        .text-center{        
+            list-style-type: none;
+        }
+        .text-center a{
+            color: rgb(16, 10, 10);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+      
+      <div class="main1">
+        <div class="container-fluid" style="min-height: 60vh;">
+            <div class="row">
+                <!-- <div class="col-sm-3 bg-primary"></div> 
+                <div class="col-sm-6 offset-sm-3">-->
+                    <h1 class="text-center"><a href="home.html">Registration</a></h1>
+                    <form name="loginform" id="loginform" onsubmit='validate(event)' action = "booking1.html">
+                        <div>
+                            <label>Name</label>
+                            <input type="name" name="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                            <label>Mobile</label>
+                            <input type="number" name="mobile" class="form-control" required>
+                        </div>
+                        <div>
+                            <label>Username</label>
+                            <input type="username" name="username" class="form-control"  minlength="5" maxlength="50" required>
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input type="password" name="password" id="pword" class="form-control"  minlength="8" maxlength="25" required>
+                        </div>
+                        <div>
+                            <label>Confirm Password</label>
+                            <input type="password" name="cpassword" id="cpword" class="form-control"  minlength="8" maxlength="25" required>
+                        </div>
+                        <h6  class="alert-danger" id="error-msg"></h6>
+                        <div class="d-grid mt-4">
+                            <h6 class="alert-danger" id="error-messages"></h6>
+                            <button type="submit" class="btn btn-outline-success shadow" id="btn-login"  onclick="return validate();">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script>
+          function validate(e){
+        var email = document.forms[0]['username'];
+        var password = document.forms[0]['password'];
+        var cpassword = document.forms[0]['cpassword'];
+        var error = document.getElementById('error-messages');
+        var error = document.getElementById('error-msg');
+        if(!email.validity.valid){
+            error.innerHTML = 'Please enter a valid username';
+            return false;
+        }
+        if(!password.validity.valid){
+            //consol.log('pasword');
+            error.innerHTML = 'Please enter a valid password';
+            return false;
+           
+        }
+        if(!cpassword.validity.valid){
+            //consol.log('pasword');
+            error.innerHTML = ' password is not matching';
+            return false;
+           
+        }
+        
+        // if(cpassword != password){
+        //    document.write('password is not matching');
+        //     return false;
+        //     e.preventDefault();
+        // }
+       }
+    </script>
+        
+</body>
+</html>
